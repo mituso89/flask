@@ -1,0 +1,16 @@
+{%extends "layout.html"%}
+
+{%block content%}
+{%for customer in customers%}
+<article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ customer.author }}</a>
+            <small class="text-muted">{{ customer.date }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ customer.title }}</a></h2>
+          <p class="article-content">{{ customer.content }}</p>
+        </div>
+      </article>
+{%endfor%}
+{%endblock content%}
